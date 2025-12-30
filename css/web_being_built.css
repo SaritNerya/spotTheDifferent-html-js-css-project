@@ -1,5 +1,5 @@
 body {
-    background-image: url(../image/webbeingbuilt.jpg);
+    background-image: url(image/webbeingbuilt.jpg);
     background-size: contain;
     background-position: center center;
     background-attachment: fixed;
@@ -22,4 +22,5 @@ button {
 button,
 p {
     color: aliceblue;
+
 }
