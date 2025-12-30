@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #fff3b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    direction: rtl;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(135deg,#d1f6f9, #f7df74, #d1f7f0);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.form-container {
+    background-color: rgba(244, 247, 189, 0.1);
+    background: linear-gradient(135deg, #f4e3a7, #efd665, #fbea87);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: rgb(22, 228, 255);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #282928;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+}
+
+#user-profile {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #000000;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#result {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(22, 228, 255);
+}
+
+.profile {
+    display: none;
+    background-color: #fff9e6;
+    color: #000000;
+    text-align: center;
+    position: absolute;
+    z-index: 1000;
+    top: 80px; /* מתחת ל-#user-profile */
+    left: 20px;
+    width: 150px; /* יותר צר */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out; /* אנימציה */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile button {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    background-color: #0c0c0c; /* אפור */
+    color: #40e0d0; /* טורקיז */
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Arial Black', Gadget, sans-serif; /* כתב בולט ומעניין */
+}
+
+.profile button:hover {
+    background-color: #40e0d0;
+    color: #030303;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+.scoreDivProfile {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    display: none; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1001; 
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ffcc33, #ff6699, #33ccff, #66ff66);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.scoreDivProfile #userPointsProfile {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px #333;
+    transition: color 0.3s ease;
+}
+
+.scoreDivProfile #userPointsProfile:hover {
+    color: #ffcc33;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.scoreDivProfile button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scoreDivProfile button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
