@@ -8,7 +8,7 @@ function updateUserProfile() {
         profileElement.style.backgroundImage = '';
     } else {
         profileElement.innerText = '';
-        profileElement.style.backgroundImage = 'url(../image/person.jpg)';
+        profileElement.style.backgroundImage = 'url(image/person.jpg)';
         profileElement.style.backgroundSize = 'cover';
     }
 }
@@ -40,7 +40,7 @@ if (document.getElementById('signinForm')) {
         localStorage.setItem('loggedInUser', JSON.stringify({ username, email, score: 0 }));
 
         updateUserProfile();
-        window.location.href = '../html/home.html';
+        window.location.href = 'index.html';
     });
 }
 if (document.getElementById('loginForm')) {
@@ -56,7 +56,7 @@ if (document.getElementById('loginForm')) {
             user.score = user.score || 0;
             localStorage.setItem('loggedInUser', JSON.stringify(user));
             updateUserProfile();
-            window.location.href = '../html/home.html';
+            window.location.href = 'index.html';
         } else {
             alert('שם המשתמש סיסמא או האימייל שגויים');
         }
@@ -72,6 +72,7 @@ document.getElementById('score').addEventListener('click', function () {
 });
 document.getElementById('log_out').addEventListener('click', function () {
     localStorage.removeItem('loggedInUser');
-    window.location.href = '../html/home.html';
+    window.location.href = 'index.html';
 });
+
 
