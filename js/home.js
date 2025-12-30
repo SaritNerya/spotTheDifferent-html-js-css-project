@@ -1,18 +1,18 @@
 document.getElementById('mario').addEventListener('click', function () {
-    window.location.href = '../html/web_being_built.html';
+    window.location.href = 'web_being_built.html';
 });
 
 document.getElementById('tictactoe').addEventListener('click', function () {
-    window.location.href = '../html/web_being_built.html';
+    window.location.href = 'web_being_built.html';
 });
 
 document.getElementById('spotthedifference').addEventListener('click', function () {
     let loginUser = localStorage.getItem('loggedInUser');
     if (!loginUser) {
-        window.location.href = '../html/sign_in.html';
+        window.location.href = 'sign_in.html';
     }
     else {
-        window.location.href = '../html/menu.html';
+        window.location.href = 'menu.html';
     }
 
 });
@@ -43,3 +43,4 @@ document.getElementById('user-profile').addEventListener('click', function (even
         event.stopPropagation(); // makes sure the click doesn't spread to other elements
     }
 });
+
