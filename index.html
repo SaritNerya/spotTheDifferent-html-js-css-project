@@ -1,4 +1,4 @@
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>דף הבית</title>
@@ -42,6 +42,65 @@
 </body>
 
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף הבית</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/sign_in.css">
+    <link rel="stylesheet" href="css/web_being_built.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+
+    <!-- פרופיל -->
+    <div id="user-profile">
+        <div id="result"></div>
+    </div>
+    <div class="profile">
+        <button id="score">לנקודות שלי</button>
+        <button id="log_out">להתנתקות</button>
+    </div>
+
+    <!-- בחירת משחק -->
+    <div class="container">
+        <h1>בחר משחק</h1>
+        <div class="buttons">
+            <button class="image-button" id="mario">
+                <img src="image/Tictactoe.png" alt="איקס-עיגול">
+                <p>איקס-עיגול</p>
+            </button>
+
+            <button class="image-button" id="tictactoe">
+                <img src="image/connect-4.jpg" alt="ארבע בשורה">
+                <p>ארבע בשורה</p>
+            </button>
+
+            <button class="image-button" id="spotthedifference">
+                <img src="image/spotthedifference.jpg" alt="מצא את ההבדלים">
+                <p>מצא את ההבדלים</p>
+            </button>
+        </div>
+
+        <div class="scoreDivProfile">
+            <div id="userPointsProfile"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/home.js"></script>
+    <script src="js/sign_in.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/web_being_built.js"></script>
+    <script src="js/game.js"></script>
+</body>
 </html>
+
 
 
