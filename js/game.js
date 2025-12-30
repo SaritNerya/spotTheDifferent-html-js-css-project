@@ -59,7 +59,7 @@ switch (pageName) {
         tmp = differencesschool_bus;
         break;
     default:
-        window.location.href = 'home.html';;
+        window.location.href = 'index.html';;
 }
 //checks which img got the click and then draws a circle on the other img.
 let circleBothImg = (whichimg, pressx, pressy, radiusInPixels, widthpic) => {
@@ -169,7 +169,7 @@ timer = setInterval(() => {
 }, 1000);
 document.querySelectorAll('.home').forEach(button => {
     button.addEventListener('click', function () {
-        window.location.href = '../html/home.html';
+        window.location.href = 'index.html';
     });
 });
 document.querySelectorAll('.score').forEach(button => {
@@ -181,7 +181,7 @@ document.querySelectorAll('.score').forEach(button => {
     });
 });
 const endGame = document.getElementById("end-play-game").addEventListener('click', function () {
-    window.location.href = 'home.html'
+    window.location.href = 'index.html'
 });
 
 document.getElementById('user-profile').addEventListener('click', function (event) {
@@ -204,8 +204,9 @@ divPageName.addEventListener('click', function (event) {
         checkDifference(event, pageName + '1');
     }
     else{
-         window.location.href = '../html/sign_in.html'
+         window.location.href = 'sign_in.html'
     }
     
 });
+
 
